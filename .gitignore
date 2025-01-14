@@ -1,1 +1,8 @@
+# Ignore all .html files
+*.html
+
+# Ignore all .png files
 *.png
+
+# Ignore all .xml files
+*.xml
