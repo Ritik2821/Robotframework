@@ -11,7 +11,10 @@ Google
     Maximize Browser Window
     sleep   5
     Input Text    name=q    ${SEARCH_TEXT}
-    Click Element    xpath=//input[@class='gNO89b']
+    # Scroll until the search button appears
+    Wait Until Element Is Visible    xpath=//input[@value='Google Search']
+    Scroll Element Into View    xpath=//input[@value='Google Search']
+    Click Element    xpath=//input[@value='Google Search']
     Wait For Page To Load
     Close Browser
 
