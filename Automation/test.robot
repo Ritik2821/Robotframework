@@ -4,10 +4,12 @@ Library  SeleniumLibrary
 *** Variables ***
 # This is a multi-line comment
 ${SEARCH_TEXT}    Ritik
+${url}  https://www.google.com/
+${browser}  chrome
 
 *** Test Cases ***
 Google
-    Open Browser    https://www.google.com/     chrome
+    Open Browser    ${url}    ${browser}
     Maximize Browser Window
     sleep   5
     Input Text    name=q    ${SEARCH_TEXT}
