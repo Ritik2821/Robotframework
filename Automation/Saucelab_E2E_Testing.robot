@@ -6,19 +6,23 @@ ${URL}               https://www.saucedemo.com
 ${BROWSER}           chrome
 ${USERNAME}          standard_user
 ${PASSWORD}          secret_sauce
+@{USERS}             standard_user  performance_glitch_user
 ${CHECKOUT_SUCCESS_MESSAGE}    Thank you for your order!
 
 *** Test Cases ***
 Valid Login Test
+    [Tags]    login
     [Documentation]    This test case logs into Sauce Labs demo site using valid credentials.
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
-    Input Text    id=user-name    ${USERNAME}
-    Input Text    id=password    ${PASSWORD}
-    Click Button    id=login-button
-    Sleep   2
-    Page Should Contain    Products
-    Close Browser
+    FOR    ${USER}    IN    @{USERS}
+        Open Browser    ${URL}    ${BROWSER}
+        Maximize Browser Window
+        Input Text    id=user-name    ${USER}
+        Input Text    id=password    ${PASSWORD}
+        Click Button    id=login-button
+        Sleep   2
+        Page Should Contain    Products
+        Close Browser
+    END
 
 End to end testing(Login->Selectitem->Chekout->VerifysuccessMsg)
     [Documentation]    This test case logs into Sauce Labs demo site, adds a product to the cart, and proceeds to checkout Visible.
