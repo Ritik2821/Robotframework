@@ -10,7 +10,7 @@ ${PASSWORD}          secret_sauce
 ${CHECKOUT_SUCCESS_MESSAGE}    Thank you for your order!
 
 *** Test Cases ***
-Valid Login Test
+Valid Login Test For All Users
     [Tags]    login
     [Documentation]    This test case logs into Sauce Labs demo site using valid credentials.
     FOR    ${USER}    IN    @{USERS}
