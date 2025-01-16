@@ -25,6 +25,7 @@ Valid Login Test For All Users
     END
 
 End to end testing(Login->Selectitem->Chekout->VerifysuccessMsg)
+    [Tags]    EndToEnd
     [Documentation]    This test case logs into Sauce Labs demo site, adds a product to the cart, and proceeds to checkout Visible.
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
