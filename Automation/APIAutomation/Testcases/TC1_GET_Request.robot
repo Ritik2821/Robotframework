@@ -7,7 +7,7 @@ ${url}  https://reqres.in
 ${id}   9
 
 *** Test Cases ***
-Creating session
+Get Request
     Create Session    mysession    ${url}
     ${response}=    GET On Session    mysession    /api/users/${id}              # Give User list
     Log To Console    ${response.status_code}
