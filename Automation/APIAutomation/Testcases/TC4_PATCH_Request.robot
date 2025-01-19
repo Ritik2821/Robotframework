@@ -8,7 +8,7 @@ ${id}     2
 
 *** Test Cases ***
 
-Creating session
+Creating session and Updating Partial data
     Create Session    mysession    ${url}
 
     # Create a dictionary with the request body for POST request
