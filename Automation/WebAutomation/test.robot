@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 # This is a multi-line comment
-${SEARCH_TEXT}    Ritik
+${SEARCH_TEXT}    Ritik Sharma
 ${url}  https://www.google.com/
 ${browser}  chrome
 
